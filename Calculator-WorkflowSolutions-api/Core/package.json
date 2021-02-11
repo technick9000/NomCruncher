@@ -1,0 +1,13 @@
+{
+    "name": "nick/calculator-workflow-solutions-api",
+    "description": "NumberCruncher",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Nikolay Kremenliev",
+            "email": "nikolay.kremenliev@gmail.com"
+        }
+    ],
+    "require": {}
+}

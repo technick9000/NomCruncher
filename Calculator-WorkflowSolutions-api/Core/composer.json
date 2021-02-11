@@ -1,0 +1,13 @@
+{
+    "name": "nick/calculator-workflow-solutions-api",
+    "description": "I like to nom on Integers, but Floats are my favourite",
+    "authors": [
+        {
+            "name": "Nikolay Kremenliev",
+            "email": "nikolay.kremenliev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "license": "CIS",
+    "require": {}
+}

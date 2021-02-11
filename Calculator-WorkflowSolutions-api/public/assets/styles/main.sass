@@ -1,0 +1,321 @@
+$default_padding : 0px
+$default_margin : 0px
+$default_box_sizing : border-box
+$default_font_color : black
+$default_font_size : 8pt
+$default_bg_color: #BD936F
+
+//Top Nav menu values
+//$nav_background_image : url("../Resources/img/menu-sprite.jpg")
+$nav_background_gradient: linear-gradient(to top right, rgba(255,255,255,0.5),rgba(255,255,255,0.3))
+$nav_links_color: rgb(116,116,116)
+$nav_burger_width: 25px
+$nav_burger_height: 3px
+$nav_burger_background_color: rgb(226, 226, 226)
+$nav_burger_margin: 5px
+
+//index section .hero-section
+//$index_cover_image_url: url("../Resources/img/bread-cover-1.jpg")
+
+$slider_bg_gradient: linear-gradient(to top right, darken($default_bg_color,15%), lighten($default_bg_color, 15%))
+
+$nProgress_bar_color1: linear-gradient(to right top, #0000ff, #0043ff, #0061ff, #007aff, #0090ff, #00a1ff, #00b0ff, #00beff, #00ccff, #00daff, #00e7ff, #2ef4fd)
+$nProgress_bar_color: linear-gradient(to right top, #12c2e9, #c471ed, #f64f59)
+*
+  padding: $default_padding
+  margin: $default_margin
+  box-sizing: $default_box_sizing
+
+*::before, *::after
+  box-sizing: border-box
+
+
+html
+  //font-family: 'Playfair Display', serif
+  font-family: 'Poppins', sans-serif
+  font-size: $default_font_size
+  color: $default_font_color
+  scroll-behavior: smooth
+  min-height: 100%
+
+body
+  display: flex
+  min-height: 100%
+  flex-direction: column
+  background:  $nProgress_bar_color
+  overflow: hidden
+
+.logo-img
+  width: 20%
+  height: auto
+  margin: 2rem
+
+.main_content
+  min-height: 60%
+  min-width: 35%
+  background: rgba(255,255,255, 0.2)
+  border-radius: 1.5rem
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 1203904
+  padding: 4rem
+
+.circle-btl
+  width: 15rem
+  height: 15rem
+  background: rgba(255,255,255,0.1)
+  border-radius: 50% // this is just to show i can make em round too its easier to use bootstrap
+  position: fixed
+  top: 70%
+  left: 30%
+  transform: translatey(0)
+  z-index: -1
+  animation: float 6s ease-in-out infinite
+
+.circle-btl1
+  width: 10rem
+  height: 10rem
+  background: rgba(255,255,255,0.1)
+  position: fixed
+  top: 85%
+  left: 25%
+  transform: translatey(0)
+  z-index: -1
+  animation: float 6s ease-in-out infinite
+  animation-delay: 1s
+
+.circle-btl2
+  width: 5rem
+  height: 5rem
+  background: rgba(255,255,255,0.1)
+  position: fixed
+  top: 95%
+  left: 21%
+  transform: translatey(0)
+  animation: float 6s ease-in-out infinite
+  animation-delay: 2s
+
+.circle-tpr
+  width: 15rem
+  height: 15rem
+  background: rgba(255,255,255,0.1)
+  position: fixed
+  top: 15%
+  right: 27%
+  transform: translatey(0)
+  animation: float 6s ease-in-out infinite
+  z-index: -1
+
+.circle-tpr1
+  width: 10rem
+  height: 10rem
+  background: rgba(255,255,255,0.1)
+  position: fixed
+  top: 7%
+  right: 22%
+  transform: translatey(0)
+  animation: float 6s ease-in-out infinite
+  animation-delay: 1s
+  z-index: -1
+
+.circle-tpr2
+  width: 5rem
+  height: 5rem
+  background: rgba(255,255,255,0.1)
+  position: fixed
+  top: 2%
+  right: 20%
+  transform: translatey(0)
+  animation: float 6s ease-in-out infinite
+  animation-delay: 2s
+  z-index: -1
+
+#the-component
+  left: 0
+  top: 95%
+  position: absolute
+  transition: all 2s ease
+
+#the-component.hide-the-component
+  left: -100%
+  top: 95%
+  transform: translatey(0)
+  transition: all 2s ease
+
+#toggleComponent
+  justify-content: center
+  align-items: center
+  display: flex
+
+@keyframes float
+  0%
+    transform: translatey(0px)
+
+  50%
+    transform: translatey(-20px)
+
+  100%
+    transform: translatey(0px)
+
+  50%
+    transform: translatey(40px)
+
+  0%
+    transform: translatey(0px)
+
+//Sorry got too lazy to implement device rendering
+@media screen and (max-width: 1023.99px)
+  .main_content
+    min-height: 60%
+    min-width: 60%
+    background: rgba(255,255,255, 0.2)
+    border-radius: 1.5rem
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1203904
+
+  .circle-btl
+    width: 15rem
+    height: 15rem
+    background: rgba(255,255,255,0.1)
+    border-radius: 50% // this is just to show i can make em round too its easier to use bootstrap
+    position: fixed
+    top: 80%
+    left: 23%
+    transform: translate(-50%, -50%) translatey(0)
+    z-index: -1
+
+  .circle-btl1
+    width: 10rem
+    height: 10rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 90%
+    left: 13%
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .circle-btl2
+    width: 5rem
+    height: 5rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 96%
+    left: 6%
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .circle-tpr
+    width: 15rem
+    height: 15rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 22%
+    right: 2%
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .circle-tpr1
+    width: 10rem
+    height: 10rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 9%
+    right: 1%
+    transform: translate(-25%, -30%)
+    z-index: -1
+
+  .circle-tpr2
+    width: 5rem
+    height: 5rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 5%
+    right: 1%
+    transform: translate(-5%, -70%)
+    z-index: -1
+@media screen and (max-width: 768.99px)
+  .main_content
+    min-height: 60%
+    min-width: 60%
+    background: rgba(255,255,255, 0.2)
+    border-radius: 1.5rem
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1203904
+
+  .circle-btl
+    width: 8rem
+    height: 8rem
+    background: rgba(255,255,255,0.1)
+    border-radius: 50% // this is just to show i can make em round too its easier to use bootstrap
+    position: fixed
+    top: 80%
+    left: 23%
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .circle-btl1
+    width: 5rem
+    height: 5rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 90%
+    left: 13%
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .circle-btl2
+    width: 3rem
+    height: 3rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 96%
+    left: 6%
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .circle-tpr
+    width: 8rem
+    height: 8rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 22%
+    right: 3%
+    z-index: -1
+
+  .circle-tpr1
+    width: 5rem
+    height: 5rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 9%
+    right: 1%
+    z-index: -1
+
+  .circle-tpr2
+    width: 2rem
+    height: 2rem
+    background: rgba(255,255,255,0.1)
+    position: fixed
+    top: 5%
+    right: 1%
+    z-index: -1
